@@ -34,5 +34,51 @@ CMD ["npm", "start"]
 
  docker stop <Container-ID>
 
- 
+ # to pull and push a container to Docker hub
+
+ docker pull 
+
+ docker push 
+
+ # to delete an image from your computer 
+
+ docker run --rm <Container-Name>
+
+ # 
+
+ docker run --rm ubuntu:18.04 cat /etc/os-release
+
+ # To build the file you'll simply run docker build and the current direct
+
+ docker build .
+
+ # to see a list of all the current images 
+
+ docker image list 
+
+ # to see all the docker process running 
+
+ docker ps
+
+ # to run an image 
+
+ docker run --rm <IMAGE-ID>
+
+ # To stop a running container 
+
+first run `docker ps` to see the list of running container then 
+
+ docker s top <Container-ID>
+
+# to disregard any cache file that might have changed 
+
+docker build . --no-cache
+
+docker run --rm -p 3000:3000 <Image-id>
+
+
+
+## to get inside a container in docker 
+
+docker exec -it <Container-ID>
 
