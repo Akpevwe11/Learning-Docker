@@ -80,5 +80,21 @@ docker run --rm -p 3000:3000 <Image-id>
 
 ## to get inside a container in docker 
 
-docker exec -it <Container-ID>
+docker exec -it <Container-ID> sh
 
+## that docker command will pull the Ubuntu docker container image 
+## from the internet and run it.  
+
+docker run -d -ti ubuntu:16.04
+
+## To execute a command on the Docker container, 
+
+docker exec -i <Container_Id> hostname 
+
+## If you want to connect to your Docker container and use Bash, you need to use 
+
+docker exec -ti <Docker_Id> /bin/bash
+
+## If you want to stop a container from running 
+
+docker stop <Docker-Id>
